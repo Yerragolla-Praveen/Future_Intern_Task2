@@ -1,8 +1,8 @@
 # Future_Intern_Task2
 
-##Employee Management System
+## Employee Management System
 
-####Description
+#### Description
      The Employee Management System is a web application designed to facilitate the management of employee records within an organization. Built using Django, this system provides a user-friendly interface for administrators to perform various operations related to employee management, including creating, updating, viewing, and deleting employee records. The application also incorporates secure user authentication to ensure that sensitive data is protected.
 
 #### Key Features
