@@ -1,0 +1,26 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h2>{{ employee.first_name }} {{ employee.last_name }}</h2>
+        </div>
+        <div class="card-body">
+            <p class="card-text"><strong>Email:</strong> {{ employee.email }}</p>
+            <p class="card-text"><strong>Position:</strong> {{ employee.position }}</p>
+            <p class="card-text"><strong>Department:</strong> {{ employee.department }}</p>
+            <p class="card-text"><strong>Date Hired:</strong> {{ employee.date_hired }}</p>
+        </div>
+        <div class="card-footer text-muted">
+            <div class="d-flex justify-content-between">
+                <a href="{% url 'employee_update' employee.pk %}" class="btn btn-primary">Edit</a>
+                <form action="{% url 'employee_delete' employee.pk %}" method="post" class="d-inline-block ml-2">{% csrf_token %}
+                    <input type="submit" value="Delete" class="btn btn-danger">
+                </form>
+                <a href="{% url 'employee_list' %}" class="btn btn-secondary">Back to list</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
